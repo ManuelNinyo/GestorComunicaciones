@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GestorComunicaciones.WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:GestorComunicaciones.WebApi.Extension.ConfigureContainer">
+            <summary>
+            class to configure starup 
+            </summary>
+        </member>
+        <member name="M:GestorComunicaciones.WebApi.Extension.ConfigureContainer.UseSwaggerConfig(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            method that configure swagger into starup
+            </summary>
+        </member>
+        <member name="T:GestorComunicaciones.WebApi.Extension.ConfigureServiceContainer">
+            <summary>
+            class whith extension methods to register services
+            </summary>
+        </member>
+        <member name="M:GestorComunicaciones.WebApi.Extension.ConfigureServiceContainer.AddSwaggerOpenAPI(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            register swagger
+            </summary>
+        </member>
+        <member name="M:GestorComunicaciones.WebApi.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:GestorComunicaciones.WebApi.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+        </member>
+    </members>
+</doc>
