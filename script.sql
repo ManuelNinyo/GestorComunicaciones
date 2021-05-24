@@ -95,24 +95,3 @@ values(
         @Consecutivo
     );
 go 
-execute InsertarComunicacion 'interno',
-    1,
-    1,
-    1;
-execute InsertarComunicacion 'externo',
-1,
-1,
-2;
-go
-select *
-from Comunicaciones
-select Nombre
-from TiposCorrespondencia
-
-USE master;
-GO
-ALTER DATABASE Comunicaciones 
-SET SINGLE_USER 
-WITH ROLLBACK IMMEDIATE;
-GO
-DROP DATABASE Comunicaciones;
