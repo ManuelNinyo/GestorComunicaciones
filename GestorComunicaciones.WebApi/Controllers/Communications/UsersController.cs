@@ -5,6 +5,7 @@ using GestorComunicaciones.Core.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,17 +15,19 @@ using System.Threading.Tasks;
 
 namespace GestorComunicaciones.WebApi.Controllers.Communications
 {
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme,Roles ="Administrador")]
     [Route("api/[controller]")]
     [ApiController]
     public class UsersController : ControllerBase
     {
         private readonly IUserService _userService;
         private readonly IMapper _mapper;
-        public UsersController(IMapper mapper,IUserService userService)
+        private readonly ILogger _logger;
+        public UsersController(IMapper mapper, ILogger logger, IUserService userService)
         {
             _userService = userService;
             _mapper = mapper;
+            _logger = logger;
         }
 
         // GET: api/<UsersController>

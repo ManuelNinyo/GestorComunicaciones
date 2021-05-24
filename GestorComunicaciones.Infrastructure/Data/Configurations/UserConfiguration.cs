@@ -39,7 +39,7 @@ namespace GestorComunicaciones.Infrastructure.Data.Configurations
             builder.HasOne(d => d.Role)
                 .WithMany(p => p.Users)
                 .HasForeignKey(d => d.RoleId)
-                .HasConstraintName("FK__Usuarios__Rol__276EDEB3");
+                .HasConstraintName("FK_USUARIO_ROL");
 
         }
     }
